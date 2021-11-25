@@ -1,0 +1,13 @@
+array, size of array, doublerAppend, doublerInsert
+tiny array, 10, 94, 39
+smallArray 100, 110, 53
+mediumArray 1000, 152, 192
+largerArray 10,000, 561, 9659
+extraLargeArray, 1000,000, 362, 116788
+
+
+doublerAppend is O(n) and doublerInsert appears to be O(n^2). doublerInsert performs better with smaller arrays but does not scale nicely when
+the data set is larger. The doublerAppend performs better with medium size and larger arrays. 
+
+Upon research it seems like the difference between the performance of the two functions would be that array.push requires fewer manipulations. Array.unshift requires the the value to be inserted into the front of the array which requires 
+memory to be manipulated and copied for every insertion which does not happen for array.push.
